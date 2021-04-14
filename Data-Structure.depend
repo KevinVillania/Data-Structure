@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1618404743 source:c:\users\kevin holden\desktop\github\data-structure\data-structures\data-structure\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
