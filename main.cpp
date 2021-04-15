@@ -1,8 +1,10 @@
 //TODO- fix random numbers, refactor driving code to become more intuitive
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
 #include <time.h>
+#include "Linked List.h"
 using namespace std;
 
 class Vector{
@@ -69,6 +71,7 @@ int main(){
 
     //instance of class Vector
     Vector v1;
+    LinkedList LL;
 
     v1.inputVector(25);
     v1.printVector();
