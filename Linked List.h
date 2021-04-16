@@ -4,13 +4,12 @@
 class LinkedList{
      private:
 
-        struct node{
+        typedef struct node{
 
             int data;
             node* next;
-        };
 
-        typedef struct node* nodePtr;
+        }*nodePtr;
 
         nodePtr head;
         nodePtr curr;
