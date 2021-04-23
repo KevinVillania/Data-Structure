@@ -10,7 +10,7 @@ class Vector{
         void InputVector(int number);
         void PrintVector();
         void SearchVector(int num);
-        void InsertVector(int place, int num);
+        void InsertVector(int index, int num);
         void DeleteVector(int num);
 };
 

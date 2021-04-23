@@ -8,10 +8,13 @@ using namespace std;
 //fill vector field w/ random number
 void Vector::InputVector(int number){
 
+    srand(time(NULL)); //initializes seed random number
     for(int i=1; i<=number; i++){
 
-        intVector.push_back(rand() % 100);
+        intVector.push_back(rand() % 1000);
     }
+
+    //sort(intVector.begin(),intVector.end());
 }
 
 
@@ -38,7 +41,7 @@ void Vector::SearchVector(int num){
 
         if(it != intVector.end()){
 
-            cout << num << " is on index " << it-intVector.begin();
+            cout << num << " is on index " << it-intVector.begin() << endl;
             //this code works because vector are stored contiguous in memory
         }else{
 
@@ -48,9 +51,9 @@ void Vector::SearchVector(int num){
 
 
 //Insert number using insert();
-void Vector::InsertVector(int place,int num){
+void Vector::InsertVector(int index,int num){
 
-    intVector.insert(intVector.begin()+place, num);
+    intVector.insert(intVector.begin()+index, num);
 }
 
 

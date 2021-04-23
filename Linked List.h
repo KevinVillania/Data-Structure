@@ -1,13 +1,14 @@
 #ifndef LINKED LIST_H
 #define LINKED LIST_H
 
+//Singly Linked List
 class LinkedList{
-     private:
 
-        typedef struct node{
+     private:
+        typedef struct node1{
 
             int data;
-            node* next;
+            node1* next;
 
         }*nodePtr;
 
@@ -17,10 +18,10 @@ class LinkedList{
 
     public:
         LinkedList();
-        void addNode(int addData);
-        void deleteNode(int delData);
-        void printList();
-
+        void AddNode(int addData);
+        void DeleteNode(int delData);
+        void SearchNode(float searchData);
+        void PrintList();
 
 };
 

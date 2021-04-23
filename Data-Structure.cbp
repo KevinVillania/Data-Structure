@@ -36,6 +36,8 @@
 		</Compiler>
 		<Unit filename="Linked List.cpp" />
 		<Unit filename="Linked List.h" />
+		<Unit filename="Vector.cpp" />
+		<Unit filename="Vector.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

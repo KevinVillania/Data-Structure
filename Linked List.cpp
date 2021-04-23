@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -11,10 +10,10 @@ LinkedList::LinkedList(): head(NULL), curr(NULL), temp(NULL)
     //initializes head, curr, temp pointers to NULL
 }
 
-void LinkedList::addNode(int addData){
+void LinkedList::AddNode(int addData){
 
     //allocates memory for new node and create n1 pointer
-    nodePtr n1 = new node;
+    nodePtr n1 = new node1;
 
     //access data and next using arrow pointer
     n1->data = addData;
@@ -27,14 +26,14 @@ void LinkedList::addNode(int addData){
         curr = head;
 
         //traverses thru LL hanggat makarating sa dulo ng LL
-        while(curr != NULL){
+        while(curr->next != NULL){
 
             //sets new pointer and points it to next node;
             curr = curr->next;
         }
 
         //sets end node to the values of n1;
-        curr = n1;
+        curr->next = n1;
 
     }else{
 
@@ -42,7 +41,7 @@ void LinkedList::addNode(int addData){
     }
 }
 
-void LinkedList::deleteNode(int delData){
+void LinkedList::DeleteNode(int delData){
 
     //cretes a pointer named delPtr and sets it to null
     nodePtr delPtr = NULL;
@@ -86,15 +85,42 @@ void LinkedList::deleteNode(int delData){
     delete delPtr;
 }
 
+//search for data in LL
+void LinkedList::SearchNode(float searchData){
+
+    //initializes curr pointer to head of LL
+    curr = head;
+
+    //traverses thru LL while checking for the desired data
+    while(curr != NULL && curr->data != searchData){
+
+        //points curr to next node
+        curr=curr->next;
+    }
+
+    //checks if curr is at the end of LL which points to NULL
+    if(curr == NULL){
+
+        cout << searchData << " wala sa list\n";
+    }else{
+
+        //element is within the LL and prints out its memory address
+        cout << searchData << " is in node " << curr << endl;
+    }
+}
+
+
 //Prints LL by traversing thru the list
-void LinkedList::printList(){
+void LinkedList::PrintList(){
 
     //initializes curr pointer to the head of LL
     curr = head;
 
     while(curr != NULL){
 
-        cout << curr->next << " ";
+        cout << curr->data << " memory address " << curr << " \n";
         curr = curr->next; //moves pointer ahead of the next node
     }
+
+    cout << endl;
 }
