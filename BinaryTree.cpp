@@ -11,7 +11,7 @@ BinaryTree::BinaryTree(): root(nullptr)
 
 BinaryTree::node* BinaryTree::CreateLeaf(int key){
 
-    node* n1 = new node;
+    node* n1 = new node; //allocate memory using new node struct
     n1->key = key;
     n1->left = nullptr;
     n1->right = nullptr;
@@ -38,7 +38,7 @@ void BinaryTree::AddLeafPrivate(int key, node* Ptr){
     //Ptr->key is the parent node
     else if(key < Ptr->key){
 
-        //checks if pointer to the left is empty
+        //checks if pointer to the left is empty or has another node
         if(Ptr->left != nullptr){
 
             //recursive function called to perform check again
@@ -53,7 +53,7 @@ void BinaryTree::AddLeafPrivate(int key, node* Ptr){
     //Ptr->key is the parent node
     else if(key > Ptr->key){
 
-        //checks if pointer to the right is empty
+        //checks if pointer to the right is empty or has another node
         if(Ptr->right != nullptr){
 
             //recursive function called to perform check again
@@ -63,7 +63,28 @@ void BinaryTree::AddLeafPrivate(int key, node* Ptr){
             Ptr->right = CreateLeaf(key);
         }
     }else{
-
+        //if key is equal to Ptr->key
         std::cout << key << " key already exists\n";
+    }
+}
+
+void BSTpractice::PrintInOrderPrivate(node* Ptr){
+
+    if(root != nullptr){
+
+        if(Ptr->left != nullptr){
+
+            PrintInOrderPrivate(Ptr->left);
+        }
+
+        cout << Ptr->key << " ";
+
+        if(Ptr->right != nullptr){
+
+            PrintInOrderPrivate(Ptr->right);
+        }
+    }else{
+
+        cout << "Binary tree is emptry\n";
     }
 }
