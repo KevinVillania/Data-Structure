@@ -49,7 +49,6 @@ void Vector::SearchVector(int num){
         }
 }
 
-
 //Insert number using insert();
 void Vector::InsertVector(int index,int num){
 

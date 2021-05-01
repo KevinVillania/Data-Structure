@@ -3,6 +3,7 @@
 #include <vector>
 #include <time.h>
 #include "BinaryTree.h"
+using namespace std;
 
 BinaryTree::BinaryTree(): root(nullptr)
 {
@@ -68,17 +69,23 @@ void BinaryTree::AddLeafPrivate(int key, node* Ptr){
     }
 }
 
-void BSTpractice::PrintInOrderPrivate(node* Ptr){
+//Print BST
+void BinaryTree::PrintInOrderPrivate(node* Ptr){
 
+    //checks if may laman ang BST
     if(root != nullptr){
 
+        //checks if may laman ang left side
         if(Ptr->left != nullptr){
 
+            //recursive function to print
+            //once mag null na yung Ptr->left lalabas na sa if statement
             PrintInOrderPrivate(Ptr->left);
         }
 
         cout << Ptr->key << " ";
 
+        //last chinecheck yung right side ng Ptr and then traverse ulit starting sa Ptr->right
         if(Ptr->right != nullptr){
 
             PrintInOrderPrivate(Ptr->right);
@@ -88,3 +95,40 @@ void BSTpractice::PrintInOrderPrivate(node* Ptr){
         cout << "Binary tree is emptry\n";
     }
 }
+
+//ReturnNode in public
+BinaryTree::node* BinaryTree::ReturnNode(int key){
+
+    return ReturnNodePrivate(key, root);
+}
+
+//similar to search function
+BinaryTree::node* BinaryTree::ReturnNodePrivate(int key, node* Ptr){
+
+    //checks if Ptr points to something
+    if(Ptr != nullptr){
+
+        if(key == Ptr->key){
+
+            return Ptr;
+        }else{
+            //checks if key is less/greater than the key
+            if(key < Ptr->key){
+
+                //goes left for less than
+                return ReturnNodePrivate(key, Ptr->left);
+            }
+            if(key > Ptr->key){
+
+                //goes right for greater than
+                return ReturnNodePrivate(key, Ptr->right);
+            }
+        }
+
+    }else{
+
+        //Ptr points to nothing
+        return nullptr;
+    }
+}
+

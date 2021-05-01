@@ -16,12 +16,14 @@ class BinaryTree
 
         void AddLeafPrivate(int key, node* Ptr);
         void PrintInOrderPrivate(node* Ptr);
+        node* ReturnNodePrivate(int key, node* Ptr);
 
     public:
         BinaryTree();
-        node* CreateLeaf(int key);
         void AddLeaf(int key);
         void PrintInOrder();
+        node* CreateLeaf(int key);
+        node* ReturnNode(int key);
 };
 
 #endif // BINARY TREE_H
