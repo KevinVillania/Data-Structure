@@ -46,15 +46,15 @@ void VectorPractice::SearchNumber(int number){
 
     it = find(numVector.begin(), numVector.end(), number);
 
-    if(it == numVector.end()){
+        if(it == numVector.end()){
 
-        cout << "number not on the list\n";
+            cout << "number not on the list\n";
 
-    }
-    else{
+        }
+        else{
 
-        cout << "number found at " << it-numVector.begin();
-    }
+            cout << "number found at " << it-numVector.begin();
+        }
 }
 
 //search number using index
@@ -69,6 +69,7 @@ int VectorPractice::SearchNumber2(int number){
         }
     }
 
+    //returns -1 when number is not found
     return -1;
 }
 
@@ -86,4 +87,19 @@ int VectorPractice::SearchNumber3(int arr[], int numElements, int number){
     }
 
     return -1;
+}
+
+
+void VectorPractice::DeleteNumber(int position){
+
+    numVector.erase(numVector.begin()+ position);
+}
+
+//insert number to vector
+void VectorPractice::InsertNumber(int index, int number){
+
+    vector<int>::iterator it = numVector.begin();
+
+    numVector.insert(it+index, number);
+
 }

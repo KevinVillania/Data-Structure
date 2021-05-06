@@ -17,7 +17,7 @@ class VectorPractice
         int SearchNumber2(int number);
         int SearchNumber3(int arr[], int numElements, int number);
 
-        void InsertNumber(int position, int number);
+        void InsertNumber(int index, int number);
         void DeleteNumber(int position);
         void PrintNumber();
 

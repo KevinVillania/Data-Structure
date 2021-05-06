@@ -17,16 +17,16 @@ void LinkedList::AddNode(int addData){
 
     //access data and next using arrow pointer
     n1->data = addData;
-    n1->next = NULL;
+    n1->next = nullptr;
 
     //checks if LL is may laman or wala
     //if meron, curr is set to head, else yung n1 is set to head
-    if(head != NULL){
+    if(head != nullptr){
 
         curr = head;
 
         //traverses thru LL hanggat makarating sa dulo ng LL
-        while(curr->next != NULL){
+        while(curr->next != nullptr){
 
             //sets new pointer and points it to next node;
             curr = curr->next;
@@ -92,7 +92,7 @@ void LinkedList::SearchNode(float searchData){
     curr = head;
 
     //traverses thru LL while checking for the desired data
-    while(curr != NULL && curr->data != searchData){
+    while(curr != nullptr && curr->data != searchData){
 
         //points curr to next node
         curr=curr->next;

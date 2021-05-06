@@ -4,7 +4,7 @@
 	<algorithm>
 	<vector>
 
-1619169665 source:c:\users\kevin holden\desktop\github\data-structure\linked list.cpp
+1620310322 source:c:\users\kevin holden\desktop\github\data-structure\linked list.cpp
 	<iostream>
 	<algorithm>
 	<vector>
@@ -13,7 +13,7 @@
 
 1618999944 c:\users\kevin holden\desktop\github\data-structure\linked list.h
 
-1619854854 source:c:\users\kevin holden\desktop\github\data-structure\main.cpp
+1620313316 source:c:\users\kevin holden\desktop\github\data-structure\main.cpp
 	<iostream>
 	<algorithm>
 	<vector>
@@ -22,6 +22,7 @@
 	"Vector.h"
 	"BinaryTree.h"
 	"VectorPractice.h"
+	"LinkedListPractice.h"
 
 1618648443 c:\users\kevin holden\desktop\github\data-structure\vector.h
 
@@ -41,13 +42,19 @@
 	<time.h>
 	"BinaryTree.h"
 
-1619853870 c:\users\kevin holden\desktop\github\data-structure\vectorpractice.h
+1620302368 c:\users\kevin holden\desktop\github\data-structure\vectorpractice.h
 	<vector>
 
-1619853633 source:c:\users\kevin holden\desktop\github\data-structure\vectorpractice.cpp
+1620302466 source:c:\users\kevin holden\desktop\github\data-structure\vectorpractice.cpp
 	"VectorPractice.h"
 	<iostream>
 	<algorithm>
 	<vector>
 	<time.h>
+
+1620313291 source:c:\users\kevin holden\desktop\github\data-structure\linkedlistpractice.cpp
+	"LinkedListPractice.h"
+	<iostream>
+
+1620312433 c:\users\kevin holden\desktop\github\data-structure\linkedlistpractice.h
 
