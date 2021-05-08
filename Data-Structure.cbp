@@ -34,10 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BSTPractice.cpp" />
+		<Unit filename="BSTPractice.h" />
 		<Unit filename="BinaryTree.cpp" />
 		<Unit filename="BinaryTree.h" />
 		<Unit filename="Linked List.cpp" />
 		<Unit filename="Linked List.h" />
+		<Unit filename="LinkedListPractice.cpp" />
+		<Unit filename="LinkedListPractice.h" />
 		<Unit filename="Vector.cpp" />
 		<Unit filename="Vector.h" />
 		<Unit filename="VectorPractice.cpp" />
