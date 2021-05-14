@@ -19,7 +19,7 @@ class BSTPractice
 
 
     public:
-        BSTPractice();//ctor
+        BSTPractice();//constructor
         node* CreateLeaf(int key);
         void AddLeaf(int key);
         void PrintInOrder();

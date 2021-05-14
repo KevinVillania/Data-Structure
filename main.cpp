@@ -9,19 +9,11 @@
 #include "BinaryTree.h"
 #include "VectorPractice.h"
 #include "LinkedListPractice.h"
+#include "BSTPractice.h"
 using namespace std;
 
 //driving code
 int main(){
-
-    LinkedListPractice LL;
-
-    for(int i=0; i<=25; i++){
-
-        LL.AddNode(i);
-    }
-
-    LL.PrintList();
 
 
 }
